@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  p
+    h2= "Configuration"
+    form(action="results/", method="post")
+      input(type="hidden" name="fileloc" value=inputFile)
+      table(width="100%" cellspacing="0" cellpadding="0")
+        tr
+          th= "Input column name"
+          th= "Output column name"
+          th= "Extract HTML"
+        each hd, i in hdrs
+          tr
+            td= hd
+            td
+              input(type="text" name= hd value= i)
+            td
+              input(type="checkbox" width="50px" name= "e_"+hd)
+      p
+        span
+          b= "Add import.properties to ZIP: "
+          input(type="checkbox" name="createimportprops")
+          br
+          br
+          b= "Contents of import.properties:"
+          br
+          textarea(cols="50" rows="5" name="importprops").form-control=props
+      p
+        input(type='submit', value='Convert!')
