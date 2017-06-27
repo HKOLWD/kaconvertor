@@ -1,5 +1,4 @@
 var fs = require('fs');
-var clone = require('clone');
 var json2csv = require('json2csv');
 var mkdirp = require('mkdirp');
 var csv = require('csv-parser');
