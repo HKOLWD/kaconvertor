@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p
+    h2= "Upload CSV containing Article data"
+    form(action="upload/", method="post", enctype="multipart/form-data")
+      p
+        b="Column separator: "
+        select(name="separatorchr" size=1 multi=false)
+          option(value="," label="Comma ,")
+          option(value=";" label="Semi Colon ;")
+          option(value="\t" label="Tab \\t")
+        br
+        b="Quotation character: "
+        select(name="quotationchr" size=1 multi=false)
+          option(value="\"" label="\"")
+          option(value="\'" label="\'")
+        br
+        b="Escape character: "
+        select(name="escapechr" size=1 multi=false)
+          option(value="\"" label="\"")
+          option(value="\\" label="\\")
+          option(value="\'" label="\'")
+        br
+        b="Select CSV file: "
+        input(type="file", name="csvFile")
+      p
+        input(type='submit', value='Upload!')

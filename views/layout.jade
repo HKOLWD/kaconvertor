@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#banner
+      img(src="/images/logo.png", border="0")
+      ul#buttons
+        each menuitem in [{title:'Start',url:'/', target: "_self"},{title:'Appsolutely',url:'http://www.appsolutely.nl', target: "_blank"}]
+          if (path == menuitem.url)
+            li.active
+              a.active(href=menuitem.url target=menuitem.target) #{menuitem.title}
+          else
+            li
+              a(href=menuitem.url, target=menuitem.target) #{menuitem.title}
+    div#frame
+      block content
