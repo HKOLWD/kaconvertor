@@ -11,7 +11,10 @@ input {
   color: #000000;
   font-size: 14px;
 }
-
+select {
+  color: #000000;
+  font-size: 14px;
+}
 td, th {
   border: 1px solid orange;
   text-align: left;
