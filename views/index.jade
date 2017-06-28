@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p
-    b= "Upload CSV containing Article data"
+    h1= "Upload CSV containing Article data"
     br
     br
     form(action="upload/", method="post", enctype="multipart/form-data")
@@ -29,6 +29,5 @@ block content
       p
         input(type='submit', value='Upload!')
       p
-        b= "What does the convertor do?"
-        br
+        h1= "What does the convertor do?"
         img(src="images/ke.png", border="0")
