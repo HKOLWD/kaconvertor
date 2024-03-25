@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     if(req.files) {
         delete req.files;
     }
-  res.render('index', { title: 'Appsolutely Knowledge Article Converter' });
+  res.render('index', { title: 'Cobra CRM Knowledge Article Converter' });
 });
 
 module.exports = router;

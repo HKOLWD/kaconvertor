@@ -15,6 +15,7 @@ router.get('/', function(req, res) {
     var props = 'CSVEncoding=UTF8\n';
     props += 'RTAEncoding=UTF8\n';
     props += 'CSVSeparator='+options.separator+'\n';
+    props += '#DefaultHTMLEncoding=UTF8\n';
     props += '#DateFormat=yyyy-MM-dd\n';
 
     setHeaders(req, res, function(r) {

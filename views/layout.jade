@@ -5,9 +5,9 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     div#banner
-      img(src="/images/logo.png", border="0")
+      img(src="/images/cobra_crm_logo.jpg", border="0")
       ul#buttons
-        each menuitem in [{title:'Start',url:'/', target: "_self"},{title:'Appsolutely',url:'http://www.appsolutely.nl', target: "_blank"}]
+        each menuitem in [{title:'Start',url:'/', target: "_self"},{title:'Cobra CRM',url:'https://cobracrm.nl/', target: "_blank"}]
           if (path == menuitem.url)
             li.active
               a.active(href=menuitem.url target=menuitem.target) #{menuitem.title}

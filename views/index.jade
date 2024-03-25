@@ -5,7 +5,6 @@ block content
   p
     b= "Upload CSV"
     br
-    br
     form(action="upload/", method="post", enctype="multipart/form-data")
       p
         b="Column separator: "
@@ -23,7 +22,7 @@ block content
         select(name="escapechr" size=1 multi=false)
           option(value="\"" label="Double Quote \"").form-control="Double Quote \""
           option(value="\'" label="Single Quote '").form-control="Single Quote '"
-        br
+      p
         b="Select CSV file: "
         input(type="file", name="csvFile")
       p
