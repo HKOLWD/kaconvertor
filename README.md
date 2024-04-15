@@ -1,4 +1,5 @@
 1. Install node
-2. Run npm install
-3. Start kaconverter: $ node ./bin/www
-4. Open http://localhost:3000 in browser
+2. Clone repo
+3. Run npm install
+4. Start kaconverter: $ node ./bin/www
+5. Open http://localhost:3000 in browser
