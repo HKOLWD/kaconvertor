@@ -11,7 +11,7 @@ router.post('/', function(req, res) {
         //
         // Result is the location to be zipped for download
         console.log('### RESULT '+JSON.stringify(resultx));
-        var fileName = '/zips/appsly_articles_'+timeStamp+'.zip';
+        var fileName = '/zips/kaconverted_articles_'+timeStamp+'.zip';
         zipFolder(resultx, 'public/'+fileName, function(err) {
             if(err) {
                 //res.redirect('result', { title: 'Download Result', result: 'Error', fileloc : fileName });
