@@ -10,9 +10,11 @@ Also allows remapping of column headers from the original CSV.
 2. Clone this git repo
 
 ```$ git clone https://github.com/HKOLWD/kaconvertor.git```
+
 3. Change to directory repo was cloned into and Run npm install
    
 ```$ npm install```
+
 4. Start kaconvertor:
 
 ```$ node ./bin/www```
@@ -21,11 +23,16 @@ Also allows remapping of column headers from the original CSV.
 
 ## Usage
 ### Step 1
+![KA Convertor](public/images/upload.png "This is what KA convertor does")
+
 - Set the CSV properties for Column separator, Quotation character and Escape character for the source CSV file. 
 - Select the source CSV file
 - Press upload!
 
+
 ### Step 2
+![KA Convertor](public/images/mapping.png "This is what KA convertor does")
+
 - Select the columns that contain HTML (check the "Extract HTML" box for those columns).
 
 Optional:
