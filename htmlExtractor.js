@@ -81,7 +81,7 @@ module.exports = function(inputFile, req, callback) {
                             //console.log('### Output header: ' + JSON.stringify(columnMap[colNr][prop]));
                             if (!empty(prop) && !empty(dta[prop]) && !empty(columnMap[colNr][prop])) {
                                 if (extractHtmlFromFields.includes(prop)) {
-
+																		console.log('### Extracting HTML for: ' + JSON.stringify(prop));
                                     //
                                     // Extract html to separate file
                                     var fileLocation = 'output/' + timeStamp + '/';
@@ -89,22 +89,22 @@ module.exports = function(inputFile, req, callback) {
                                     var fileName = 'html/html_extraction_'+propName+'_'+ counter + '.html';
                                     counter++;
                                     fs.writeFile(fileLocation+fileName, dta[prop], function (err) {
-                                        //
-                                        // Replace csv contents with file location
-                                        row[columnMap[colNr][prop]] = fileName;
-                                        //
-                                        console.log('### ROW '+JSON.stringify(row));
-                                        stream.resume();
+                                    	console.log('### WRITTEN '+fileLocation+fileName);
                                     });
+                                    //
+                                    // Replace csv contents with file location
+                                    row[columnMap[colNr][prop]] = fileName;
+                                    //
+                                    
 
                                 } else {
                                     row[columnMap[colNr][prop]] = dta[prop];
-                                    stream.resume();
                                 }
                             }
                         }
                     }
                     outlines.push(row);
+										stream.resume();
                 }
             })
             .on('end', function () {
